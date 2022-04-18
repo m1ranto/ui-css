@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    article {
+        background-color: white;
+        max-width: 400px;
+        border-radius: 20px;
+        padding: 40px 0;
+        margin: 100px auto auto;
+    }
+
+    /* Text
+    ------------------------*/
+    .text-blue {
+        color: #291f68;
+        font-style: normal;
+    }
+    .fs-small {
+        font-size: small;
+    }
+    .fs-large {
+        font-size: 20px !important;
+    }
+    .fw-bold {
+        font-weight: bold;
+    }
+
+    /* Alignment
+    ------------------------*/
+    .ms-2 {
+        margin-left: 20px;
+    }
+    .pb-3 {
+        padding-bottom: 30px;
+    }
+    .w-70 {
+        width: 70%;
+    }
+    .mx-auto {
+        margin: 0 auto;
+    }
+    .flex {
+        display: flex;
+    }
+    .justify-content-center {
+        justify-content: center;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+
+    /* Button
+    ------------------------*/
+    .btn-blue {
+        width: 65%;
+        font-size: 15px;
+        color: white;
+        background-color: #291f68;
+        border: 1px solid #291f68;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .btn-outline-blue {
+        width: 65%;
+        font-size: 15px;
+        color: #291f68;
+        background-color: white;
+        border: 1px solid #291f68;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <article>
+        <div class="flex align-items-center w-70 mx-auto pb-3">
+            <img src="img/woman_avatar.svg" alt="profile picture" width="75">
+            <address class="ms-2">
+                <span class="text-blue fw-bold fs-large">Zahou Stephens</span>
+                <span class="text-blue fs-small">Minneapolis, MN, USA</span>
+            </address>
+        </div>
+        <div class="flex justify-content-center">
+            <a class="btn-blue" href="">Follow</a>
+        </div>
+        <div class="flex justify-content-center">
+            <a class="btn-outline-blue" href="">Message</a>
+        </div>
+    </article>
+</body>
+</html>
