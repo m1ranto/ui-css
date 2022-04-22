@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tags UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    section {
+        background-color: #f1e2f5;
+        border: 5px solid white;
+        max-width: 500px;
+        min-width: 100px;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 100px auto auto;
+        color: #141a41;
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .mt-0 {
+        margin-top: 0;
+    }
+    .ms-1 {
+        margin-left: 10px;
+    }
+
+    /* Button
+    ------------------------*/
+    section  > div > a {
+        color: #141a41;
+        background-color: white;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .active {
+        color: white;
+        background-color: #141a41;
+    }
+
+</style>
+
+<body>
+
+    <section>
+        <h3 class="mt-0 ms-1">Tags</h3>
+        <div class="flex flex-wrap">
+            <a href="">Blender</a>
+            <a href="">Browser</a>
+            <a href="">cross-platform</a>
+            <a href="">Hololens</a>
+            <a href="">Microsoft</a>
+            <a href="">Mixed&nbsp;Reality</a>
+            <a class="active" href="">modeling</a>
+            <a href="">MR</a>
+            <a href="">nodejs</a>
+            <a href="">streamsocket</a>
+            <a href="">unity</a>
+            <a href="">unity3D</a>
+            <a href="">unreal engine</a>
+            <a href="">VR</a>
+            <a href="">websockets</a>
+        </div>
+    </section>
+
+</body>
+</html>
