@@ -66,9 +66,8 @@
 
     /* Style
     ------------------------*/
-    .rounded-circle {
+    .border {
         border: thick solid #e6effa;
-        border-radius: 50%;
         background-color: #e6effa;
     }
 
@@ -91,11 +90,17 @@
         text-decoration: none;
         font-size: 15px;
     }
+
+    /* Image
+    ------------------------*/
+    .img-rounded {
+        border-radius: 50%;
+    }
 </style>
 
 <body>
     <article class="flex">
-        <img class="align-self-top rounded-circle" src="img/man_avatar.svg" alt="Profile picture" width="70">
+        <img class="align-self-top border img-rounded" src="img/alex-suprun.jpg" alt="Profile picture" width="70">
         <div class="ms-2">
             <p class="text-blue fs-large fw-bold mt-15 mb-0">David Grant</p>
             <p class="mt-0">3D Artist</p>
