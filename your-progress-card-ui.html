@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Progress Card UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    article {
+        background-color: white;
+        max-width: 350px;
+        min-width: 150px;
+        border-radius: 20px;
+        padding: 30px 50px;
+        margin: 100px auto auto;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Text
+    ------------------------*/
+    .text-blue {
+        color: #141a41;
+    }
+    .fs-large {
+        font-size: large;
+    }
+    .fw-bold {
+        font-weight: bold;
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .mt-0 {
+        margin-top: 0;
+    }
+    .mb-0 {
+        margin-bottom: 0;
+    }
+    .me-1 {
+        margin-right: 10px;
+    }
+
+    /* Circle
+    ------------------------*/
+    .circle {
+        width: 60px;
+        height: 45px;
+        padding-top: 15px;
+        border-radius: 50%;
+        border: 6px solid #c3c1f8;
+    }
+</style>
+
+<body>
+    <article>
+        <p class="text-blue fs-large fw-bold">Your progress</p>
+        <div class="flex">
+            <div class="me-1">
+                <div class="circle text-center fs-large fw-bold">83%</div>
+            </div>
+            <div>
+                <p class="text-blue fw-bold mb-0">32 of 42 completed</p>
+                <p class="mt-0">Finish the course to get certificate</p>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
