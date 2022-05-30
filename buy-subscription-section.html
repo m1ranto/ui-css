@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Subscription Section UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    section {
+        background-color: white;
+        max-width: 1050px;
+        min-width: 150px;
+        margin: 50px auto;
+        border-radius: 15px;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+    .justify-content-evenly {
+        justify-content: space-evenly;
+    }
+    .my-2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Text
+    ------------------------*/
+    ul {
+        padding: 0;
+    }
+    li {
+        list-style: none;
+    }
+    .text-blue {
+        color: midnightblue;
+    }
+    .text-center {
+        text-align: center;
+    }
+
+    /* Card
+    ------------------------*/
+    .card {
+        border: thin solid midnightblue;
+        border-radius: 10px;
+        padding: 0 25px 15px;
+    }
+
+    /* Button
+    ------------------------*/
+    .btn {
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+    .btn-blue {
+        background-color: midnightblue;
+        color: white;
+    }
+    .btn-lg {
+        font-size: unset;
+    }
+</style>
+
+<body>
+    <section>
+        <h2 class="text-blue text-center">Get the most of your mobile with the right subscription</h2>
+        <p class="text-center">All devices come with free delivery or pickup as standard. See information on available shopping options for your location.</p>
+        <div class="flex flex-wrap justify-content-evenly">
+            <div class="card">
+                <h3>Ice</h3>
+                <ul>
+                    <li>Ice mobile 10GB</li>
+                    <li>Up to 100Mbit/s</li>
+                    <li>9&dollar;/month</li>
+                </ul>
+                <button class="btn">Add subscription</button>
+            </div>
+            <div class="card">
+                <h3>Telia</h3>
+                <ul>
+                    <li>Telia mobile 15GB</li>
+                    <li>Up to 200Mbit/s</li>
+                    <li>14&dollar;/month</li>
+                </ul>
+                <button class="btn">Add subscription</button>
+            </div>
+            <div class="card">
+                <h3>Star</h3>
+                <ul>
+                    <li>Star mobile 20GB</li>
+                    <li>Up to 300Mbit/s</li>
+                    <li>19&dollar;/month</li>
+                </ul>
+                <button class="btn">Add subscription</button>
+            </div>
+        </div>
+        <div class="text-center my-2">
+            <button class="btn btn-blue btn-lg">See all subscriptions</button>
+        </div>
+    </section>
+</body>
+</html>
