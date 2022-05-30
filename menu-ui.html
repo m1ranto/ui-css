@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    section {
+        background-color: white;
+        max-width: 1050px;
+        min-width: 150px;
+        margin: 100px auto;
+        border-radius: 15px;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+        column-gap: 2rem;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+
+    /* Text
+    ------------------------*/
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(33, 37, 41);
+    }
+    a:hover {
+        text-decoration: deeppink underline 4px;
+    }
+</style>
+
+<body>
+    <section>
+        <ul class="flex flex-wrap">
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Lighting</a></li>
+            <li><a href="#">Decor</a></li>
+            <li><a href="#">Serving & Tableware</a></li>
+            <li><a href="#">Textiles & Carpets</a></li>
+            <li><a href="#">Jewelry & Accessories</a></li>
+            <li><a href="#">Outdoor environment</a></li>
+        </ul>
+    </section>
+</body>
+</html>
