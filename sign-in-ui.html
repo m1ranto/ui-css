@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    section {
+        background-color: white;
+        max-width: 450px;
+        min-width: 100px;
+        margin: 100px auto;
+        border-radius: 15px;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .mt-0 {
+        margin-top: 0;
+    }
+    .mb-0 {
+        margin-bottom: 0;
+    }
+
+    /* Text
+    ------------------------*/
+    .text-blue {
+        color: #141a41;
+    }
+    .text-dark {
+        color: rgb(33, 37, 41);
+    }
+
+    /* Button
+    ------------------------*/
+    .btn-blue {
+        background-color: #141a41;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        border: thin solid #141a41;
+    }
+    .btn-primary {
+        background-color: #227bef;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        border: thin solid #227bef;
+    }
+
+</style>
+
+<body>
+    <section>
+        <h2 class="mb-0 text-blue">You are signed out</h2>
+        <p class="mt-0">Sign in to get the best experience</p>
+        <button class="btn-blue" type="button">Continue with email</button>
+        <button class="btn-primary" type="button">Continue with Facebook</button>
+        <p>
+            <small>By continueing, you agree to our <a class="text-dark" href="#">Terms of Service</a> and acknowledge you've read our <a class="text-dark" href="#">Privacy Policy</a>.</small>
+        </p>
+    </section>
+</body>
+</html>
