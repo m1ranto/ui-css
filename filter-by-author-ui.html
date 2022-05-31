@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter by author UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    section {
+        background-color: white;
+        max-width: 300px;
+        min-width: 150px;
+        margin: 50px auto;
+        border-radius: 15px;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-column {
+        flex-direction: column;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+    .row-gap-1 {
+        row-gap: 0.75rem;
+    }
+    .mt-2 {
+        margin-top: 20px;
+    }
+    .ms-1 {
+        margin-left: 10px;
+    }
+
+    /* Form
+    ------------------------*/
+    .form {
+        padding: 10px 10px 10px 32px;
+        width: 100%;
+        background-color: #ffd595;
+        border: thin solid #f2ba4a;
+    }
+    .form:focus {
+        outline: none;
+        box-shadow: 0 0 10px #f2ba4a;
+    }
+    .form-search {
+        background-color: transparent;
+        border: none;
+        margin-right: -30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Color
+    ------------------------*/
+    .bg-light {
+        padding: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: rgb(33, 37, 41);
+    }
+    .bg-light:hover {
+        background-color: #ffd595;
+    }
+    .bg-light:focus {
+        background-color: #ff9647;
+    }
+    .img-rounded {
+        width: 50px;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+<section>
+    <h2>Filter by author</h2>
+    <form class="flex mt-2">
+        <button class="form-search">
+            <label for="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(33, 37, 41)" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </label>
+        </button>
+        <input class="form" id="search" type="search" placeholder="Find users">
+    </form>
+    <div class="mt-2 flex flex-column row-gap-1">
+        <div>
+            <a href="#" class="flex align-items-center bg-light">
+                <img class="img-rounded" src="img/jurica-koletic.png" alt="Profile picture">
+                <span class="ms-1">Tafita Rabe</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" class="flex align-items-center bg-light">
+                <img class="img-rounded" src="img/prince-akachi.png" alt="Profile picture">
+                <span class="ms-1">Gloria Ring</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" class="flex align-items-center bg-light">
+                <img class="img-rounded" src="img/jake-nackos.png" alt="Profile picture">
+                <span class="ms-1">Zahou Stephens</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" class="flex align-items-center bg-light">
+                <img class="img-rounded" src="img/christopher-campbell.png" alt="Profile picture">
+                <span class="ms-1">Grace J. Brown</span>
+            </a>
+        </div>
+    </div>
+</section>
+</body>
+</html>
