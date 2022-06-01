@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parameters Page Header UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    section {
+        background-color: white;
+        max-width: 500px;
+        min-width: 350px;
+        margin: 50px auto;
+        border-radius: 15px;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .align-items-baseline {
+        align-items: baseline;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+    .justify-content-between {
+        justify-content: space-between;
+    }
+    .column-gap-05 {
+        column-gap: 0.5rem;
+    }
+    .column-gap-1 {
+        column-gap: 1rem;
+    }
+    .mt-1 {
+        margin-top: 10px;
+    }
+
+    /* Text
+    ------------------------*/
+    .list-unstyled {
+        list-style: none;
+        padding: 0;
+    }
+    .text-primary {
+        color: midnightblue;
+    }
+    .text-decoration-primary {
+        text-decoration: none;
+    }
+    .text-decoration-primary:hover,
+    .text-decoration-primary:focus   {
+        text-decoration: underline 5px midnightblue;
+        text-underline-offset: 8px;
+    }
+    .fs-x-small {
+        font-size: x-small;
+    }
+
+    /* Form
+    ------------------------*/
+    .form {
+        padding: 10px 10px 10px 32px;
+        width: 100%;
+        border: thin solid lightblue;
+    }
+    .form:focus {
+        outline: none;
+        box-shadow: 0 0 3px midnightblue;
+    }
+    .form-search {
+        background-color: transparent;
+        border: none;
+        margin-right: -30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Button
+    ------------------------*/
+    .btn {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .btn-sm {
+        font-size: x-small;
+        padding: 6px 10px;
+    }
+    .btn-primary {
+        background-color: midnightblue;
+        color: white;
+    }
+    .btn-primary:hover {
+        background-color: rgba(25, 25, 112, 0.9 );
+        color: white;
+    }
+    .btn-outline-primary {
+        border: thin solid midnightblue;
+    }
+
+</style>
+
+<body>
+<section>
+    <ul class="flex column-gap-1 list-unstyled">
+        <li><a class="text-decoration-primary text-primary" href="#">My parameters</a></li>
+        <li><a class="text-decoration-primary text-primary" href="#">Public</a></li>
+        <li><a class="text-decoration-primary text-primary" href="#">Configurations</a></li>
+    </ul>
+    <div class="flex align-items-baseline justify-content-between">
+        <p>My Parameters</p>
+        <div>
+            <button class="btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16"><path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/></svg>
+                Edit
+            </button>
+            <button class="btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/></svg>
+                Delete
+            </button>
+            <button class="btn btn-primary">
+                Create
+            </button>
+        </div>
+    </div>
+    <form class="flex mt-1">
+        <button class="form-search">
+            <label for="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(33, 37, 41)" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </label>
+        </button>
+        <input class="form" id="search" type="search" placeholder="Search ETH, BTC,...">
+    </form>
+    <div class="mt-1">
+        <button class="btn btn-sm btn-outline-primary">
+            <span class="flex align-items-center column-gap-05">
+                Newest
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                </svg>
+            </span>
+        </button>
+        <button class="btn fs-x-small">
+            Clear filters
+        </button>
+    </div>
+
+</section>
+</body>
+</html>
