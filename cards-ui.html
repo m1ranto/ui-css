@@ -12,99 +12,77 @@
     article {
         background-color: white;
         max-width: 400px;
+        min-width: 150px;
         border-radius: 20px;
         padding: 40px 0;
         margin: 100px auto auto;
     }
 
-    /* Text
-    ------------------------*/
-    .text-blue {
-        color: #291f68;
-        font-style: normal;
-    }
-    .fs-small {
-        font-size: small;
-    }
-    .fs-large {
-        font-size: 20px !important;
-    }
-    .fw-bold {
-        font-weight: bold;
-    }
-
     /* Alignment
     ------------------------*/
-    .ms-2 {
-        margin-left: 20px;
-    }
-    .pb-3 {
-        padding-bottom: 30px;
-    }
-    .w-70 {
-        width: 70%;
-    }
-    .mx-auto {
-        margin: 0 auto;
-    }
-    .flex {
-        display: flex;
-    }
-    .justify-content-center {
-        justify-content: center;
-    }
-    .align-items-center {
-        align-items: center;
-    }
+    .flex { display: flex }
+    .column-gap-1 { column-gap: 1.25rem }
+    .flex-column { flex-direction: column }
+    .flex-wrap { flex-wrap: wrap }
+    .justify-content-center { justify-content: center }
+    .align-items-center { align-items: center }
+    .pb-3 { padding-bottom: 30px }
+
+    /* Text
+    ------------------------*/
+    .text-primary { color: #291f68 }
+    .fst-normal { font-style: normal }
+    .fs-small { font-size: small }
+    .fs-large { font-size: larger }
+    .fw-bold { font-weight: bold }
 
     /* Button
     ------------------------*/
-    .btn-blue {
+    .btn {
         width: 65%;
         font-size: 15px;
-        color: white;
-        background-color: #291f68;
-        border: 1px solid #291f68;
+        border: 1px solid transparent;
         border-radius: 5px;
         padding: 10px;
         margin: 5px;
-        text-align: center;
-        text-decoration: none;
+        cursor: pointer;
     }
+
+    .btn-blue {
+        color: white;
+        background-color: #291f68;
+    }
+    .btn-blue:hover { opacity: .9 }
+    .btn-blue:active { opacity: 1 }
+
     .btn-outline-blue {
-        width: 65%;
-        font-size: 15px;
         color: #291f68;
         background-color: white;
         border: 1px solid #291f68;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 5px;
-        text-align: center;
-        text-decoration: none;
     }
+    .btn-outline-blue:hover { opacity: .9 }
+    .btn-outline-blue:active { opacity: 1 }
 
     /* Image
     ------------------------*/
     .img-rounded {
         border-radius: 50%;
+        width: 75px;
     }
 </style>
 
 <body>
     <article>
-        <div class="flex align-items-center w-70 mx-auto pb-3">
-            <img class="img-rounded" src="img/jake-nackos.png" alt="profile picture" width="75">
-            <address class="ms-2">
-                <span class="text-blue fw-bold fs-large">Zahou Stephens</span>
-                <span class="text-blue fs-small">Atlanta, GA, USA</span>
+        <div class="flex column-gap-1 flex-wrap justify-content-center align-items-center pb-3">
+            <img class="img-rounded" src="img/jake-nackos.png" alt="profile picture">
+            <address class="fst-normal">
+                <div class="text-primary fw-bold fs-large">Zahou Stephens</div>
+                <div class="text-primary fs-small">Atlanta, GA, USA</div>
             </address>
         </div>
-        <div class="flex justify-content-center">
-            <a class="btn-blue" href="">Follow</a>
-        </div>
-        <div class="flex justify-content-center">
-            <a class="btn-outline-blue" href="">Message</a>
+        <div class="flex flex-column align-items-center">
+            <button class="btn btn-blue">Follow</button>
+            <button class="btn btn-outline-blue">Message</button>
         </div>
     </article>
 </body>
