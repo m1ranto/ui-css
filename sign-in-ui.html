@@ -6,14 +6,12 @@
 </head>
 
 <style>
-    body {
-        background-color: skyblue;
-    }
+    body { background-color: skyblue }
     section {
         background-color: white;
         max-width: 450px;
         min-width: 100px;
-        margin: 100px auto;
+        margin: 50px auto;
         border-radius: 15px;
         padding: 20px;
         color: rgb(33, 37, 41);
@@ -21,47 +19,45 @@
 
     /* Alignment
     ------------------------*/
-    .mt-0 {
-        margin-top: 0;
+    .flex {
+        display: flex;
+        gap: .25rem;
     }
-    .mb-0 {
-        margin-bottom: 0;
-    }
+    .flex-wrap { flex-wrap: wrap }
+    .flex-item { flex-grow: 1 }
+    .mt-0 { margin-top: 0 }
+    .mb-0 { margin-bottom: 0 }
 
     /* Text
     ------------------------*/
-    .text-blue {
-        color: #141a41;
-    }
-    .text-dark {
-        color: rgb(33, 37, 41);
-    }
+    .text-blue { color: #141a41 }
+    .text-dark { color: rgb(33, 37, 41) }
 
     /* Button
     ------------------------*/
-    .btn-blue {
-        background-color: #141a41;
+    .btn {
         color: white;
         padding: 15px;
         border-radius: 10px;
-        border: thin solid #141a41;
+        border: thin solid transparent;
+        cursor: pointer;
     }
-    .btn-primary {
-        background-color: #227bef;
-        color: white;
-        padding: 15px;
-        border-radius: 10px;
-        border: thin solid #227bef;
-    }
-
+    .btn-primary        { background-color: #141a41 }
+    .btn-primary:hover  { opacity: .9 }
+    .btn-primary:active { opacity: 1 }
+    .btn-info        { background-color: #227bef }
+    .btn-info:hover  { opacity: .9 }
+    .btn-info:active { opacity: 1 }
 </style>
 
 <body>
     <section>
         <h2 class="mb-0 text-blue">You are signed out</h2>
         <p class="mt-0">Sign in to get the best experience</p>
-        <button class="btn-blue" type="button">Continue with email</button>
-        <button class="btn-primary" type="button">Continue with Facebook</button>
+        <div class="flex flex-wrap">
+            <button class="btn btn-primary flex-item" type="button">Continue with email</button>
+            <button class="btn btn-info flex-item" type="button">Continue with Facebook</button>
+        </div>
         <p>
             <small>By continueing, you agree to our <a class="text-dark" href="#">Terms of Service</a> and acknowledge you've read our <a class="text-dark" href="#">Privacy Policy</a>.</small>
         </p>
