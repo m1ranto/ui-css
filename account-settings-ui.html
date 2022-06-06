@@ -12,10 +12,10 @@
     section {
         background-color: white;
         max-width: 400px;
-        min-width: 350px;
+        min-width: 150px;
         border-radius: 20px;
         padding: 30px 50px;
-        margin: 100px auto auto;
+        margin: 50px auto;
         color: rgb(33, 37, 41);
     }
     a {
@@ -26,6 +26,17 @@
     ------------------------*/
     .flex {
         display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-item {
+        flex-grow: 1;
+        flex-basis: 200px;
+    }
+    .flex-item-btn {
+        flex-grow: 1;
+        flex-basis: 50px;
     }
     .justify-content-between {
         justify-content: space-between;
@@ -42,6 +53,9 @@
     .mb-0 {
         margin-bottom: 0;
     }
+    .mb-1 {
+        margin-bottom: 20px;
+    }
 
     /* Text
     ------------------------*/
@@ -54,31 +68,39 @@
     input {
         padding: 5px;
     }
-    .btn-blue {
+    .btn-primary {
         color: white;
         background-color: #141a41;
         padding: 10px 20px;
         border-radius: 20px;
+        font-size: unset;
+        border: thin solid transparent;
+        cursor: pointer;
     }
-
+    .btn-primary:hover {
+        opacity: 0.9;
+    }
+    .btn-primary:active {
+        opacity: 1;
+    }
 </style>
 
 <body>
     <section>
         <h2>Account preferences</h2>
-        <div class="flex justify-content-between">
-            <div>
+        <div class="flex flex-wrap justify-content-between mb-1">
+            <div class="flex-item">
                 <p class="mt-0 mb-0">Email address</p>
-                <p class="mt-05">email@address.com</p>
+                <p class="mt-05 mb-0">email@address.com</p>
             </div>
-            <p><a class="btn-blue mt-2" href="#">Change</a></p>
+            <button class="flex-item-btn btn-primary mt-2">Change</button>
         </div>
-        <div class="flex justify-content-between">
-            <div>
+        <div class="flex flex-wrap justify-content-between">
+            <div class="flex-item">
                 <label for="password">Password</label><br>
                 <input type="password" value="password" id="password" disabled>
             </div>
-            <p><a class="btn-blue mt-2" href="#">Change</a></p>
+            <button class="flex-item-btn btn-primary mt-2">Change</button>
         </div>
     </section>
 </body>
