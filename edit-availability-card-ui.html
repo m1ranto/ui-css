@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Availability Card UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    section {
+        background-color: white;
+        max-width: 250px;
+        min-width: 125px;
+        margin: 50px auto;
+        border-radius: 25px;
+        border: 2px solid midnightblue;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-grow {
+        flex-grow: 1;
+        flex-basis: 100px;
+    }
+    .gap-1 {
+        gap: 0.5rem;
+    }
+    .my-1 {
+        margin-block: 10px;
+    }
+
+    /* Text
+    ------------------------*/
+    .text-primary {
+        color: midnightblue;
+    }
+    .line {
+        background-color: lightblue;
+        padding: 1px;
+        margin-block: 20px;
+    }
+
+    /* Form
+    ------------------------*/
+    .checkbox {
+        width: 20px;
+        height: 20px;
+    }
+    .label {
+        cursor: pointer;
+    }
+
+    /* Button
+    ------------------------*/
+    .btn {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+    .btn-primary {
+        background-color: midnightblue;
+        color: white;
+    }
+    .btn-primary:hover {
+        opacity: 0.9;
+    }
+    .btn-primary:active {
+        opacity: 1;
+    }
+    .btn-outline-primary {
+        border: thin solid midnightblue;
+        color: midnightblue;
+        background-color: white;
+    }
+    .btn-outline-primary:hover {
+        opacity: 0.8;
+    }
+    .btn-outline-primary:active {
+        opacity: 1;
+    }
+</style>
+
+<body>
+<section>
+    <h2 class="text-primary">Edit availability</h2>
+    <p>Check your availability time to let know that you are available for new opportunities</p>
+    <form>
+        <div class="my-1">
+            <input class="checkbox" type="checkbox" id="agriculture">
+            <label class="label" for="agriculture">Full-time</label>
+        </div>
+        <div class="my-1">
+            <input class="checkbox" type="checkbox" id="air-transport">
+            <label class="label" for="air-transport">Part-time</label>
+        </div>
+        <div class="my-1">
+            <input class="checkbox" type="checkbox" id="business-services">
+            <label class="label" for="business-services">Freelance & projects</label>
+        </div>
+        <div class="line"></div>
+        <div class="flex flex-wrap gap-1">
+            <button class="flex-grow btn btn-primary" type="button">Done</button>
+            <button class="flex-grow btn btn-outline-primary" type="reset">Cancel</button>
+        </div>
+    </form>
+</section>
+</body>
+</html>
