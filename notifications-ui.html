@@ -12,11 +12,47 @@
     article {
         background-color: white;
         max-width: 500px;
-        min-width: 250px;
+        min-width: 100px;
         border-radius: 20px;
-        padding: 30px;
-        margin: 100px auto auto;
+        padding: 20px;
+        margin: 50px auto;
         color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-basis {
+        flex-basis: 150px;
+    }
+    .flex-grow {
+        flex-grow: 1;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+    .px-2 {
+        padding-inline: 20px;
+    }
+    .py-1 {
+        padding-block: 5px;
+    }
+    .mt-0 {
+        margin-top: 0;
+    }
+    .mt-05 {
+        margin-top: 5px;
+    }
+    .mb-0 {
+        margin-bottom: 0;
+    }
+    .ps-1 {
+        padding-left: 10px;
     }
 
     /* Text
@@ -39,46 +75,21 @@
     .bg {
         background-color: #ffe9f2;
     }
-    .rounded-05 {
+    .border-radius {
         border-radius: 5px;
     }
-
-    /* Alignment
-    ------------------------*/
-    .px-2 {
-        padding: 0 20px;
-    }
-    .mt-0 {
-        margin-top: 0;
-    }
-    .mt-05 {
-        margin-top: 5px;
-    }
-    .mb-0 {
-        margin-bottom: 0;
-    }
-    .ps-1 {
-        padding-left: 10px;
-    }
-    .flex {
-        display: flex;
-    }
-    .align-items-center {
-        align-items: center;
-    }
-
 </style>
 
 <body>
     <article>
         <p class="text-blue fs-large fw-bold mt-0">You have 1 new message</p>
-        <div class="flex">
-            <div class="bg rounded-05 flex align-items-center px-2">
+        <div class="flex flex-wrap">
+            <div class="flex align-items-center border-radius bg px-2 py-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" color="#c22767">
                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                 </svg>
             </div>
-            <div class="ps-1">
+            <div class="ps-1 flex-basis flex-grow">
                 <p class="fw-bold mb-0 fs-small">Feb 22</p>
                 <p class="mt-05">If you like what we do, please tell your friends and share</p>
             </div>
