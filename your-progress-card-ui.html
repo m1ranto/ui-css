@@ -11,12 +11,39 @@
     }
     article {
         background-color: white;
-        max-width: 350px;
-        min-width: 150px;
+        max-width: 400px;
+        min-width: 100px;
         border-radius: 20px;
-        padding: 30px 50px;
+        padding: 20px;
         margin: 100px auto auto;
         color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-basis {
+        flex-basis: 125px;
+    }
+    .flex-grow {
+        flex-grow: 1;
+    }
+    .column-gap {
+        column-gap: 10px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .mt-0 {
+        margin-top: 0;
+    }
+    .mb-0 {
+        margin-bottom: 0;
     }
 
     /* Text
@@ -29,24 +56,6 @@
     }
     .fw-bold {
         font-weight: bold;
-    }
-
-    /* Alignment
-    ------------------------*/
-    .flex {
-        display: flex;
-    }
-    .text-center {
-        text-align: center;
-    }
-    .mt-0 {
-        margin-top: 0;
-    }
-    .mb-0 {
-        margin-bottom: 0;
-    }
-    .me-1 {
-        margin-right: 10px;
     }
 
     /* Circle
@@ -63,11 +72,9 @@
 <body>
     <article>
         <p class="text-blue fs-large fw-bold">Your progress</p>
-        <div class="flex">
-            <div class="me-1">
-                <div class="circle text-center fs-large fw-bold">83%</div>
-            </div>
-            <div>
+        <div class="flex flex-wrap column-gap">
+            <div class="circle text-center fs-large fw-bold">83%</div>
+            <div class="flex-basis flex-grow">
                 <p class="text-blue fw-bold mb-0">32 of 42 completed</p>
                 <p class="mt-0">Finish the course to get certificate</p>
             </div>
