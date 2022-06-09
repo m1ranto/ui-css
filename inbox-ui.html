@@ -9,14 +9,58 @@
     body {
         background-color: skyblue;
     }
-    article {
+    section {
         background-color: white;
-        max-width: 320px;
+        max-width: 400px;
         min-width: 200px;
         border-radius: 20px;
-        padding: 30px 50px;
-        margin: 100px auto auto;
+        padding: 30px 20px;
+        margin: 50px auto;
         color: rgb(33, 37, 41);
+        font-size: 15px;
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-grow {
+        flex-grow: 1;
+    }
+    .flex-basis {
+        flex-basis: 150px;
+    }
+    .flex-basis-date {
+        flex-basis: 85px;
+    }
+    .column-gap-1 {
+        column-gap: 0.5rem;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+    .align-items-start {
+        align-items: start;
+    }
+    .justify-content-center {
+        justify-content: center;
+    }
+    .justify-content-between {
+        justify-content: space-between;
+    }
+    .mt-0 {
+        margin-top: 0;
+    }
+
+    .my-0 {
+        margin-block: 0;
+    }
+    .my-1 {
+        margin-block: 10px;
     }
 
     /* Text
@@ -28,9 +72,6 @@
         color: grey;
         font-size: 14px;
     }
-    article {
-        font-size: 15px;
-    }
     .fs-large {
         font-size: 18px;
     }
@@ -38,43 +79,24 @@
         font-weight: bold;
     }
 
-    /* Alignment
-    ------------------------*/
-    .flex {
-        display: flex;
-    }
-    .align-self-start {
-        align-self: start;
-        margin-top: 7px;
-    }
-    .align-items-center {
-        align-items: center;
-    }
-    .justify-content-center {
-        justify-content: center;
-    }
-    .justify-content-between {
-        justify-content: space-between;
-    }
-    .mt-0 {
-        margin-top: 0;
-    }
-    .mb-0 {
-        margin-bottom: 0;
-    }
-    .mb-1 {
-        margin-bottom: 10px;
-    }
-    .ms-1 {
-        margin-left: 10px;
-    }
-
     /* Button
     ------------------------*/
+    .btn-light {
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 5px;
+        color: rgb(33, 37, 41);
+    }
+    .btn-light:hover {
+        background-color: lightgoldenrodyellow;
+    }
+    .btn-light:active {
+        opacity: 0.8;
+    }
     .btn-blue {
+        display: flex;
         color: white;
         background-color: #141a41;
-        display: flex;
         padding: 15px;
         border: thin solid grey;
         border-radius: 10px;
@@ -82,65 +104,67 @@
         font-size: 15px;
     }
     .btn-blue:hover {
-        background-color: rgba(20, 26, 65, 0.95);
+        opacity: 0.9;
+    }
+    .btn-blue:active {
+        opacity: 1;
     }
 
     /* Image
     ------------------------*/
     .img-rounded {
+        width: 50px;
         border-radius: 50%;
     }
 </style>
 
 <body>
-    <article>
-        <p class="text-blue fs-large fw-bold">Your messages</p>
-        <a class="btn-blue align-items-center justify-content-center mb-1" href="">
+    <section>
+        <p class="text-blue fs-large fw-bold mt-0">Your messages</p>
+        <a class="btn-blue align-items-center justify-content-center" href="#">
             Compose &nbsp;
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16"><path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/></svg>
         </a>
-        <section class="flex justify-content-between">
-            <div class="flex">
-                <img class="align-self-start img-rounded" src="img/michael-dam.png" alt="Profile picture" width="50">
-                <div class="ms-1">
-                    <p class="mb-0 fw-bold text-blue">Nancy Meyer</p>
-                    <p class="mt-0">Thank you for answering.</p>
+        <a class="btn-light flex align-items-start column-gap-1 my-1" href="#">
+            <img class="img-rounded" src="img/michael-dam.png" alt="Profile picture">
+            <div class="flex-grow flex flex-wrap justify-content-between">
+                <div class="flex-basis flex-grow">
+                    <p class="my-0 fw-bold text-blue">Nancy Meyer</p>
+                    <p class="my-0">Thank you for answering.</p>
                 </div>
+                <p class="text-secondary my-0 flex-basis-date">now</p>
             </div>
-            <p class="text-secondary">4 days ago</p>
-        </section>
-        <section class="flex justify-content-between">
-            <div class="flex">
-                <img class="align-self-start img-rounded" src="img/jake-nackos.png" alt="Profile picture" width="50">
-                <div class="ms-1">
-                    <p class="mb-0 fw-bold text-blue">Zahou Stephens</p>
-                    <p class="mt-0">How was the trip?</p>
+        </a>
+        <a class="btn-light flex align-items-start column-gap-1 my-1" href="#">
+            <img class="img-rounded" src="img/jake-nackos.png" alt="Profile picture">
+            <div class="flex-grow flex flex-wrap justify-content-between">
+                <div class="flex-basis flex-grow">
+                    <p class="my-0 fw-bold text-blue">Zahou Stephens</p>
+                    <p class="my-0">How was the trip?</p>
                 </div>
+                <p class="text-secondary my-0 flex-basis-date">5 days ago</p>
             </div>
-            <p class="text-secondary">5 days ago</p>
-        </section>
-        <section class="flex justify-content-between">
-            <div class="flex">
-                <img class="align-self-start img-rounded" src="img/jurica-koletic.png" alt="Profile picture" width="50">
-                <div class="ms-1">
-                    <p class="mb-0 fw-bold text-blue">Rafael Jay</p>
-                    <p class="mt-0">I hope you are well.</p>
+        </a>
+        <a class="btn-light flex align-items-start column-gap-1 my-1" href="#">
+            <img class="img-rounded" src="img/jurica-koletic.png" alt="Profile picture">
+            <div class="flex-grow flex flex-wrap justify-content-between">
+                <div class="flex-basis flex-grow">
+                    <p class="my-0 fw-bold text-blue">Rafael Jay</p>
+                    <p class="my-0">I hope you are well.</p>
                 </div>
+                <p class="text-secondary my-0 flex-basis-date">Mar 12</p>
             </div>
-            <p class="text-secondary">Mar 12</p>
-        </section>
-        <section class="flex justify-content-between">
-            <div class="flex">
-                <img class="align-self-start img-rounded" src="img/stefan-stefancik.png" alt="Profile picture" width="50">
-                <div class="ms-1">
-                    <p class="mb-0 fw-bold text-blue">Ashley Pierce</p>
-                    <p class="mt-0">Hi there, how are you?</p>
+        </a>
+        <a class="btn-light flex align-items-start column-gap-1 my-1" href="#">
+            <img class="img-rounded" src="img/stefan-stefancik.png" alt="Profile picture">
+            <div class="flex-grow flex flex-wrap justify-content-between">
+                <div class="flex-basis flex-grow">
+                    <p class="my-0 fw-bold text-blue">Ashley Pierce</p>
+                    <p class="my-0">Hi there, how are you?</p>
                 </div>
+                <p class="text-secondary my-0 flex-basis-date">Dec 23, 2021</p>
             </div>
-            <p class="text-secondary">Dec 23, 2021</p>
-        </section>
-    </article>
+        </a>
+    </section>
 </body>
 </html>
