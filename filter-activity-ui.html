@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter Activity UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue
+    }
+    section {
+        background-color: white;
+        color: rgb(33, 37, 41);
+        max-width: 450px;
+        min-width: 100px;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    /* Alignment
+    ------------------------*/
+    .d-inline-block {
+        display: inline-block;
+    }
+    .my-3 {
+        margin-block: 3px;
+    }
+
+    /* Text
+    ------------------------*/
+    .text-primary {
+        color: midnightblue;
+    }
+    .text-decoration-none {
+        text-decoration: none;
+    }
+
+    /* Button
+    ------------------------*/
+    .btn-outline-primary {
+        border: thin solid midnightblue;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: rgb(33, 37, 41);
+    }
+    .btn-outline-primary:hover,
+    .btn-outline-primary:focus {
+        color: white;
+        background-color: midnightblue;
+    }
+</style>
+
+<body>
+    <section>
+        <h2 class="text-primary">Activity</h2>
+        <nav>
+            <span>Show: </span>
+            <a class="d-inline-block my-3 text-decoration-none btn-outline-primary" href="#">All</a>
+            <a class="d-inline-block my-3 text-decoration-none btn-outline-primary" href="#">Account</a>
+            <a class="d-inline-block my-3 text-decoration-none btn-outline-primary" href="#">Posts</a>
+            <a class="d-inline-block my-3 text-decoration-none btn-outline-primary" href="#">Comments</a>
+            <a class="d-inline-block my-3 text-decoration-none btn-outline-primary" href="#">Likes</a>
+        </nav>
+    </section>
+</body>
+</html>
