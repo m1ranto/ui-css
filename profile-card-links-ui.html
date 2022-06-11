@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Card Links UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    article {
+        background-color: white;
+        max-width: 300px;
+        min-width: 100px;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px auto;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-column {
+        flex-direction: column;
+    }
+    .flex-basis {
+        flex-basis: 75px;
+    }
+    .gap-1 {
+        gap: 0.5rem;
+    }
+    .justify-content-center {
+        justify-content: center;
+    }
+    .text-center {
+        text-align: center;
+    }
+
+    .mb-0 {
+        margin-bottom: 0;
+    }
+    .mt-2 {
+        margin-top: 20px;
+    }
+
+    /* Text
+    ------------------------*/
+    .text-blue {
+        color: #141a41;
+    }
+    .text-secondary {
+        color: grey;
+    }
+    .fw-bold {
+        font-weight: bold;
+    }
+    .fst-normal {
+        font-style: normal;
+    }
+    .fs-x-large {
+        font-size: x-large;
+    }
+    .fs-small {
+        font-size: small;
+    }
+
+    /* Box
+    ------------------------*/
+    .card {
+        padding: 5px;
+        border: thin solid lightblue;
+        border-radius: 10px;
+        text-decoration: none;
+        color: rgb(33, 37, 41);
+    }
+    .card:hover,
+    .card:focus {
+        border: thin solid midnightblue;
+    }
+
+    .link-card {
+        max-width: 150px;
+        background-color: midnightblue;
+        color: white;
+        padding: 5px;
+        border-radius: 10px;
+        margin: 20px auto;
+        text-align: start;
+    }
+    .link {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+    }
+    .link:hover,
+    .link:focus {
+        background-color: mediumslateblue;
+        border-radius: 5px;
+    }
+
+    /* Image
+    ------------------------*/
+    .img-rounded {
+        width: 100px;
+        border-radius: 50%;
+    }
+    .img-border {
+        border: thick solid #e6effa;
+        background-color: #e6effa;
+    }
+</style>
+
+<body>
+<article class="text-center">
+    <img class="img-rounded img-border" src="img/jake-nackos.png" alt="Profile picture">
+    <address class="fst-normal">
+        <p class="fs-x-large text-blue fw-bold mb-0">Zahou Stephens</p>
+        <span class="text-secondary">UX Designer</span>
+    </address>
+    <div class="flex flex-wrap gap-1 justify-content-center mt-2">
+        <a class="flex flex-column flex-basis card" href="#">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/></svg>
+            </span>
+            <span class="fs-small">Set a status</span>
+        </a>
+        <a class="flex flex-column flex-basis card" href="#">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16"><path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/></svg>
+            </span>
+            <span class="fs-small">Edit profile</span>
+        </a>
+        <a class="flex flex-column flex-basis card" href="#">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16"><path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+            </span>
+            <span class="fs-small">More</span>
+        </a>
+    </div>
+    <div class="link-card">
+        <a class="link" href="#">Settings</a>
+        <a class="link" href="#">My Stats</a>
+        <a class="link" href="#">Friends</a>
+        <a class="link" href="#">Log out</a>
+    </div>
+</article>
+</body>
+</html>
