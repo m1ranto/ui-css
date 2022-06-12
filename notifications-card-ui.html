@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications Card UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    section {
+        background-color: white;
+        max-width: 350px;
+        min-width: 100px;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px auto;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-basis {
+        flex-basis: 150px;
+    }
+    .flex-grow {
+        flex-grow: 1;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+    .justify-content-center {
+        justify-content: center;
+    }
+    .column-gap-1 {
+        column-gap: 0.5rem;
+    }
+    .mt-0 {
+        margin-top: 0;
+    }
+
+    .mb-0 {
+        margin-bottom: 0;
+    }
+
+    /* Text
+    ------------------------*/
+    .text-primary {
+        color: midnightblue;
+    }
+    .text-secondary {
+        color: grey;
+    }
+    .fs-small {
+        font-size: 15px;
+    }
+    .fw-bold {
+        font-weight: bold;
+    }
+    .word-break {
+        word-break: break-word;
+    }
+
+    /* Box
+    ------------------------*/
+    .line {
+        border: thin solid lightgrey;
+    }
+    .icon {
+        background-color: midnightblue;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    /* Image
+    ------------------------*/
+    .img-rounded {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="icon flex justify-content-center align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16"><path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/></svg>
+        </div>
+        <h2 class="text-primary word-break">Notifications</h2>
+        <div class="flex flex-wrap align-items-center column-gap-1">
+            <img class="img-rounded" src="img/michael-dam.png" alt="Profile picture">
+            <div class="flex-basis flex-grow">
+                <p class="mb-0"><span class="fw-bold text-primary">Nancy Meyer comments</span> on your post.</p>
+                <p class="text-secondary mt-0 fs-small">an hour ago</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="flex flex-wrap align-items-center column-gap-1">
+            <img class="img-rounded" src="img/prince-akachi.png" alt="Profile picture">
+            <div class="flex-basis flex-grow">
+                <p class="mb-0"><span class="fw-bold text-primary">Gloria Ring likes</span> your post.</p>
+                <p class="text-secondary mt-0 fs-small">yesterday</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
