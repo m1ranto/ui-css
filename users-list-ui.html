@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users List UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    .container {
+        background-color: white;
+        border-radius: 20px;
+        max-width: 1250px;
+        min-width: 140px;
+        padding: 20px;
+        margin: 50px auto;
+        color: #191919;
+    }
+
+    h1 {
+        margin: 0;
+    }
+    h2 {
+        color: midnightblue;
+        margin: 0;
+    }
+    form {
+        display: flex;
+        grid-column: 1;
+    }
+    nav {
+        display: flex;
+        gap: .25rem;
+        grid-column: 2/4;
+    }
+    nav > a {
+        text-decoration: none;
+        color: midnightblue;
+        padding: 8px 5px;
+        border-radius: 5px;
+    }
+    nav > a:hover,
+    nav > a:focus {
+        color: white;
+        background-color: royalblue;
+    }
+    section {
+        display: flex;
+        column-gap: 1rem;
+        flex-wrap: wrap;
+        border: 1px lightblue solid;
+        border-radius: 10px;
+        padding: 15px 10px;
+    }
+    img {
+        border-radius: 50%;
+        width: 80px;
+    }
+    address {
+        font-style: normal;
+    }
+    button {
+        background-color: white;
+        color: royalblue;
+        border: 1px royalblue solid;
+        border-radius: 10px;
+        padding: 3px 6px;
+    }
+
+    /* Alignment
+    ------------------------*/
+    .mt-1 {
+        margin-top: 10px;
+    }
+
+    /* Form
+    ------------------------*/
+    .form {
+        padding: 10px 10px 10px 40px;
+        width: 100%;
+        background-color: white;
+        border: thin solid lightblue;
+    }
+    .form:focus {
+        outline: none;
+        box-shadow: 0 0 10px lightblue;
+    }
+    .form-search {
+        background-color: transparent;
+        border: none;
+        margin-right: -35px;
+        margin-left: 5px;
+        position: relative;
+        z-index: 1;
+    }
+
+
+    /* Flexbox
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-basis {
+        flex: 1 1 100px;
+    }
+    .gap {
+        gap: .25rem;
+    }
+
+
+    /* Grid layout
+    ------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    @media screen and (max-width: 900px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        nav {
+            grid-column: 2;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        nav {
+            grid-column: 1;
+        }
+    }
+    @media screen and (max-width: 300px) {
+        .container {
+            padding: 10px;
+        }
+        nav {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        section {
+            justify-content: center;
+            text-align: center;
+        }
+        .flex {
+            justify-content: center;
+            text-align: center;
+        }
+        .flex-basis {
+            flex: 1 1 200px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="grid">
+            <h1>User</h1>
+
+            <form>
+                <button class="form-search" type="button">
+                    <label for="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(33, 37, 41)" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+                    </label>
+                </button>
+                <input class="form" id="search" type="search" placeholder="Find users">
+            </form>
+
+            <nav>
+                <a href="#">New Users</a>
+                <a href="#">Popular</a>
+                <a href="#">Relevant</a>
+            </nav>
+
+            <section>
+                <div>
+                    <img src="img/prince-akachi.png" alt="Profile picture">
+                </div>
+                <div class="flex-basis">
+                    <h2>Lelah Nichols</h2>
+                    <address>Troy, MI</address>
+                    <div class="flex flex-wrap gap mt-1">
+                        <button type="button">clothes</button>
+                        <button type="button">stem</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <img src="img/joseph-gonzalez.png" alt="Profile picture">
+                </div>
+                <div class="flex-basis">
+                    <h2>Anthony S. Morin Joera</h2>
+                    <address>Lyndhurst, NJ</address>
+                    <div class="flex flex-wrap gap mt-1">
+                        <button type="button">vintage</button>
+                        <button type="button">electric</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <img src="img/christopher-campbell.png" alt="Profile picture">
+                </div>
+                <div class="flex-basis">
+                    <h2>Anna Rice</h2>
+                    <address>Austin, TX</address>
+                    <div class="flex flex-wrap gap mt-1">
+                        <button type="button">road</button>
+                        <button type="button">mountain</button>
+                        <button type="button">trip</button>
+                        <button type="button">earth</button>
+                        <button type="button">nature</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <img src="img/alex-suprun.jpg" alt="Profile picture">
+                </div>
+                <div class="flex-basis">
+                    <h2>Robert Bower</h2>
+                    <address>Cincinnati, OH</address>
+                    <div class="flex flex-wrap gap mt-1">
+                        <button type="button">maintenance</button>
+                        <button type="button">gears</button>
+                        <button type="button">frames</button>
+                        <button type="button">repair</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <img src="img/michael-dam.png" alt="Profile picture">
+                </div>
+                <div class="flex-basis">
+                    <h2>Amy Campbell</h2>
+                    <address>Warrior, AL</address>
+                    <div class="flex flex-wrap gap mt-1">
+                        <button type="button">maintenance</button>
+                        <button type="button">gears</button>
+                        <button type="button">frames</button>
+                        <button type="button">repair</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <img src="img/jake-nackos.png" alt="Profile picture">
+                </div>
+                <div class="flex-basis">
+                    <h2>Meyer Ina</h2>
+                    <address>Fort Worth, TX</address>
+                    <div class="flex flex-wrap gap mt-1">
+                        <button type="button">headset</button>
+                        <button type="button">gadget</button>
+                        <button type="button">speed</button>
+                        <button type="button">writer</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
