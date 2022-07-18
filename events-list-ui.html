@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events List UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    .container {
+        background-color: white;
+        max-width: 900px;
+        min-width: 175px;
+        margin: 50px auto;
+        border-radius: 10px;
+        padding: 20px 30px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Grid
+    ------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+        grid-auto-rows: minmax(auto, 250px);
+        gap: .75rem;
+    }
+    .grid > article {
+        background-color: #eaecf9;
+        padding: 20px;
+        overflow: scroll;
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+    .grid > article:nth-of-type(odd) {
+        background-color: #544bab;
+        color: white;
+    }
+    @media screen and (max-width: 700px) {
+        .container {
+            padding: 20px;
+        }
+        .grid {
+            grid-template-columns: repeat(2, minmax(150px, auto));
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .grid {
+            grid-template-columns: minmax(150px, auto);
+        }
+    }
+
+    /* Flexbox
+    ------------------------*/
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Font
+    ------------------------*/
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    h1 {
+        margin-top: 0;
+    }
+    h2 {
+        font-size: unset;
+        overflow: hidden;
+    }
+    address {
+        font-style: normal;
+        font-size: small;
+    }
+    br + span {
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    /* Button
+    ------------------------*/
+    button {
+        margin-top: 25px;
+        width: 100%;
+        font-size: unset;
+        cursor: pointer;
+        border: none;
+        background-color: #37335d;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        grid-column: 1 / 4;
+    }
+    button:hover {
+        opacity: .9;
+    }
+    button:active {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Events</h1>
+        <div class="grid">
+            <article>
+                <time datetime="2022-05-02">May
+                    <br><span>2</span>
+                </time>
+                <h2>Compatible Inkjet Cartridge</h2>
+                <a class="flex" href="#">
+                    <div>
+                        <time datetime="12:00">12:00 - 14:00</time>
+                        <address>Online</address>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                    </div>
+                </a>
+            </article>
+
+            <article>
+                <time datetime="2022-05-04">May
+                    <br><span>4</span>
+                </time>
+                <h2>Computer Hardware Desktops And Notebooks And handhelds</h2>
+                <a class="flex" href="#">
+                    <div>
+                        <time datetime="15:00">15:00 - 17:00</time>
+                        <address>Online</address>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                    </div>
+                </a>
+            </article>
+
+            <article>
+                <time datetime="2022-05-08">May
+                    <br><span>8</span>
+                </time>
+                <h2>Choosing The Best Audio Player Software For Your Computer</h2>
+                <a class="flex" href="#">
+                    <div>
+                        <time datetime="14:00">14:00 - 15:00</time>
+                        <address>Online</address>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                    </div>
+                </a>
+            </article>
+
+            <article>
+                <time datetime="2022-05-11">May
+                    <br><span>11</span>
+                </time>
+                <h2>Management For Home Users</h2>
+                <a class="flex" href="#">
+                    <div>
+                        <time datetime="09:00">09:00 - 11:00</time>
+                        <address>Online</address>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                    </div>
+                </a>
+            </article>
+
+            <article>
+                <time datetime="2022-05-14">May
+                    <br><span>14 - 16</span>
+                </time>
+                <h2>Help Finding Information Online</h2>
+                <a class="flex" href="#">
+                    <div>
+                        <time datetime="11:00">11:00 - 13:00</time>
+                        <address>Online</address>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                    </div>
+                </a>
+            </article>
+
+            <article>
+                <time datetime="2022-05-18">May
+                    <br><span>18 - 20</span>
+                </time>
+                <h2>Steps In Installing Rack Mount Lcd Monitors</h2>
+                <a class="flex" href="#">
+                    <div>
+                        <time datetime="13:00">13:00 - 14:00</time>
+                        <address>Online</address>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+                    </div>
+                </a>
+            </article>
+        </div>
+        <button>load more events</button>
+    </div>
+</body>
+</html>
