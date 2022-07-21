@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Card UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    .container {
+        background-color: white;
+        max-width: 680px;
+        min-width: 220px;
+        margin: 50px auto;
+        border-radius: 10px;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+
+    /* Grid
+    ------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+    .grid > section {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    /* Font
+    ------------------------*/
+    h3 {
+        color: black;
+        margin-top: 0;
+        font-size: large;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    /* Color
+    ------------------------*/
+    section {
+        padding: 15px;
+        border-radius: 10px;
+    }
+    section:hover {
+        color: whitesmoke;
+        background-color: midnightblue;
+    }
+    section:hover > h3 {
+        color: white;
+    }
+    section:hover > .btn {
+        color: whitesmoke;
+        background-color: cornflowerblue;
+    }
+
+    /* Button
+    ------------------------*/
+    .btn {
+        color: midnightblue;
+        background-color: lightcyan;
+        padding: 5px 15px;
+        border-radius: 20px;
+    }
+    .btn:active {
+        opacity: .6;
+    }
+</style>
+
+<body>
+    <div class="container grid">
+        <section>
+            <h3>Quick start</h3>
+            <p>Boardme is a solution that offers User Onboarding as a Service.</p>
+            <div>
+                <a class="btn" href="#">Get started</a>
+            </div>
+        </section>
+        <section>
+            <h3>Listeners</h3>
+            <p>Programmatic access over your onboarding layer.</p>
+            <div>
+                <a class="btn" href="#">API</a>
+            </div>
+        </section>
+        <section>
+            <h3>Projects</h3>
+            <p>Project that should be loaded into your website when Boardme is installed.</p>
+            <div>
+                <a class="btn" href="#">Application</a>
+            </div>
+        </section>
+        <section>
+            <h3>Install</h3>
+            <p>This article helps you install Boardme into your website or application.</p>
+            <div>
+                <a class="btn" href="#">Install now</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
