@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book a Training UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    .container {
+        background-color: white;
+        max-width: 900px;
+        min-width: 360px;
+        margin: 50px auto;
+        border-radius: 10px;
+        color: rgb(33, 37, 41);
+    }
+
+
+    /* Grid
+    ------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1rem;
+        padding: 20px;
+    }
+
+
+    /* Flex
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .space-between {
+        justify-content: space-between;
+    }
+    .items-center {
+        align-items: center;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .text-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gap {
+        gap: .5rem;
+    }
+
+
+    /* Font
+    ------------------------*/
+    h2 {
+        color: white;
+        background-color: #203774;
+        padding: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: white;
+    }
+    section > p {
+        margin-bottom: 5px;
+    }
+    address {
+        font-style: normal;
+    }
+    a {
+        text-decoration: none;
+        color: grey;
+    }
+    a:hover {
+        color: #203774;
+    }
+    a:focus {
+        color: black;
+    }
+    .text-black {
+        color: black;
+        font-weight: bold;
+        font-size: x-large;
+    }
+    .today {
+        font-size: small;
+    }
+
+    /* Color
+    ------------------------*/
+    section {
+        color: whitesmoke;
+        background-color: #203774;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    /* Button
+    ------------------------*/
+    button {
+        color: rgb(33, 37, 41);
+        background-color: white;
+        border: none;
+        padding: 8px 13px;
+        border-radius: 5px;
+        font-size: unset;
+    }
+    button:hover {
+        opacity: .9;
+        cursor: pointer;
+    }
+    button:active {
+        opacity: 1;
+    }
+
+    /* Image
+    ------------------------*/
+    img {
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid royalblue;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>Book a training</h2>
+        <p class="center">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg></a>
+            <time class="text-center text-black" datetime="2022-09-24">
+                Sep. 24<br>
+                <span class="today">Today</span>
+            </time>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></a>
+        </p>
+        <div class="grid">
+            <section>
+                <div class="flex space-between">
+                    <div>
+                        <h3>Bodypump</h3>
+                        <p><time datetime="09:30">09:30</time> - 60 min</p>
+                    </div>
+                    <div>
+                        <button>Book a spot</button>
+                    </div>
+                </div>
+                <p>Trained by</p>
+                <div class="flex items-center gap">
+                    <img src="img/jake-nackos.png" alt="Trainer picture">
+                    <address>Emily Stark</address>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex space-between">
+                    <div>
+                        <h3>Pilates</h3>
+                        <p><time datetime="10:30">10:30</time> - 60 min</p>
+                    </div>
+                    <div>
+                        <button>Book a spot</button>
+                    </div>
+                </div>
+                <p>Trained by</p>
+                <div class="flex items-center gap">
+                    <img src="img/joseph-gonzalez.png" alt="Trainer picture">
+                    <address>Erick Nest</address>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
