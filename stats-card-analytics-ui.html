@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stats Card Analytics UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    body > section {
+        background-color: white;
+        max-width: 500px;
+        min-width: 220px;
+        margin: 50px auto;
+        border-radius: 10px;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+
+    /* Grid
+    ------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: .5rem;
+    }
+
+
+    /* Flexbox
+    ------------------------*/
+    .flex {
+        display: flex;
+    }
+    .space-between {
+        justify-content: space-between;
+    }
+    .items-center {
+        align-items: center;
+    }
+    .gap {
+        gap: .5rem;
+    }
+    h4 {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+
+    /* Alignment
+    ------------------------*/
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h4 {
+        margin-bottom: 0;
+    }
+    figure {
+        margin: 0;
+    }
+    .mt {
+        margin-top: 50px;
+    }
+    p {
+        margin-top: 5px;
+        font-size: large;
+    }
+
+    /* Font
+    ------------------------*/
+    address {
+        font-style: normal;
+        color: dimgrey;
+    }
+
+    /* Color
+    ------------------------*/
+    a {
+        color: inherit;
+    }
+    a:hover,
+    a:focus {
+        color: black;
+    }
+    small {
+        color: dimgrey;
+    }
+    .stats-up {
+        background-color: lightgreen;
+        font-size: small;
+        padding: 1px 10px;
+        border-radius: 15px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .stats-down {
+        background-color: lightcoral;
+        font-size: small;
+        padding: 1px 10px;
+        border-radius: 15px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Button
+    ------------------------*/
+    button {
+        color: white;
+        background-color: #171717;
+        border: none;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        opacity: .9;
+    }
+    button:active {
+        opacity: 1;
+    }
+
+    /* Image
+    ------------------------*/
+    img {
+        width: 65px;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="flex items-center space-between">
+            <figure class="flex items-center gap">
+                <img src="img/christopher-campbell.png" alt="User profile picture">
+                <figcaption>
+                    <h3>Cecilia Patton</h3>
+                    <address>@cecilia_patton</address>
+                </figcaption>
+            </figure>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16"><path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/></svg>            </a>
+        </div>
+
+        <h3 class="mt">28 days summary</h3>
+        <small>with change over previous period</small>
+
+        <div class="grid">
+            <section>
+                <h4>
+                    POSTS
+                    <span class="stats-down">
+                        <svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='currentColor' class='bi bi-arrow-down-short' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z'/></svg>
+                        11.1%
+                    </span>
+                </h4>
+                <p>24</p>
+            </section>
+            <section>
+                <h4>
+                    IMPRESSIONS
+                    <span class="stats-down">
+                        <svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='currentColor' class='bi bi-arrow-down-short' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z'/></svg>
+                        34.5%
+                    </span>
+                </h4>
+                <p>11.2k</p>
+            </section>
+            <section>
+                <h4>
+                    PROFILE VIEWS
+                    <span class="stats-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/></svg>
+                        2.4%
+                    </span>
+                </h4>
+                <p>844</p>
+            </section>
+            <section>
+                <h4>
+                    FOLLOWERS
+                    <span class="stats-down">
+                        <svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='currentColor' class='bi bi-arrow-down-short' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z'/></svg>
+                        -2
+                    </span>
+                </h4>
+                <p>1,005</p>
+            </section>
+        </div>
+
+        <button>View more insights</button>
+    </section>
+</body>
+</html>
