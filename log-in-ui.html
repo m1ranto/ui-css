@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    body > section {
+        background-color: white;
+        max-width: 700px;
+        min-width: 200px;
+        margin: 50px auto;
+        border-radius: 10px;
+        color: rgb(33, 37, 41);
+    }
+
+
+    /* Grid
+    ------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+    @media screen and (max-width: 550px) {
+        .grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 125px 1fr;
+        }
+        .grid > img {
+            grid-row: 1;
+        }
+    }
+
+
+    /* Flexbox
+    ------------------------*/
+    .flex {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    /* Alignment
+    ------------------------*/
+    .push-end {
+        float: right;
+    }
+    h2 {
+        margin: 0;
+    }
+    h2 + p {
+        margin-top: 0;
+    }
+    form, p {
+        margin-top: 40px;
+    }
+    .grid > section {
+        padding: 20px;
+    }
+
+    /* Form
+    ------------------------*/
+    .form-input {
+        padding: 10px 40px 10px 10px;
+        width: 100%;
+        background-color: white;
+        border: thin solid lightblue;
+        font-size: unset;
+    }
+    .form-input:focus {
+        outline: none;
+        box-shadow: 0 0 10px lightblue;
+    }
+    .form-icon {
+        background-color: transparent;
+        border: none;
+        margin-left: -35px;
+        margin-right: 5px;
+        position: relative;
+        z-index: 1;
+    }
+    .checkbox-large {
+        width: 16px;
+        height: 16px;
+    }
+    form > button {
+        margin-top: 15px;
+        width: 100%;
+        border: none;
+        font-size: unset;
+        color: white;
+        background-color: midnightblue;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    form > button:hover {
+        opacity: .9;
+    }
+    form > button:active {
+        opacity: 1;
+    }
+
+    /* Font
+    ------------------------*/
+    small {
+        font-size: unset;
+        color: dimgrey;
+    }
+    .text-secondary {
+        color: dimgrey;
+    }
+    a {
+        color: inherit;
+    }
+
+    /* Image
+    ------------------------*/
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    @media screen and (max-width: 550px) {
+        img {
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 0;
+        }
+    }
+</style>
+
+<body>
+    <section class="grid">
+        <section>
+            <h2>Log in</h2>
+            <p><small>Log in to your account to upload or download pictures, videos or music</small></p>
+
+            <form>
+                <div class="flex">
+                    <input class="form-input" id="email" type="email" placeholder="Email">
+                    <button class="form-icon" type="button">
+                        <label for="email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(33, 37, 41)" class="bi bi-person" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/></svg>
+                        </label>
+                    </button>
+                </div>
+                <div class="flex">
+                    <input class="form-input" id="password" type="password" placeholder="Password">
+                    <button class="form-icon" type="button">
+                        <label for="password">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(33, 37, 41)" class="bi bi-lock" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/></svg>
+                        </label>
+                    </button>
+                </div>
+                <input class="checkbox-large" id="checkbox" type="checkbox">
+                <label class="text-secondary" for="checkbox">Remember me</label>
+                <a class="push-end" href="#">Forgot account?</a>
+                <br>
+                <button>Log in</button>
+            </form>
+
+            <p>Don't have an account yet? <a href="#">Sign up</a></p>
+        </section>
+
+        <img src="img/water-sime-basioli-unsplash.jpg" alt="Login caption photo">
+    </section>
+</body>
+</html>
