@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Photos UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    body > section {
+        background-color: white;
+        max-width: 900px;
+        min-width: 220px;
+        margin: 50px auto;
+        border-radius: 10px;
+        padding: 20px;
+        color: rgb(33, 37, 41);
+    }
+
+
+    /* Grid
+    ------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr);
+        grid-auto-rows: 200px;
+        gap: 1rem;
+    }
+    .grid-photo {
+        display: grid;
+        grid-template-rows: 1fr 50px;
+    }
+    figure:nth-of-type(2) {
+        grid-row: 1;
+    }
+    figure:nth-of-type(3) {
+        grid-row: 2;
+    }
+    figure:nth-of-type(5) {
+        grid-row: 3;
+    }
+    figure:nth-of-type(4) {
+        grid-row: 4;
+    }
+
+    @media screen and (min-width: 450px) {
+        .grid {
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+        }
+        figure:nth-of-type(2) {
+            grid-column: 1;
+            grid-row: 1 / 3;
+        }
+        figure:nth-of-type(3) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        figure:nth-of-type(4) {
+            grid-column: 1 / 3;
+            grid-row: 3;
+        }
+        figure:nth-of-type(5) {
+            grid-column: 2;
+            grid-row: 2;
+        }
+    }
+    @media screen and (min-width: 650px) {
+        .grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        figure:nth-of-type(2) {
+            grid-column: 1;
+            grid-row: 1 / 3;
+        }
+        figure:nth-of-type(3) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        figure:nth-of-type(4) {
+            grid-column: 2 / 4;
+            grid-row: 2;
+        }
+        figure:nth-of-type(5) {
+            grid-column: 3;
+            grid-row: 1;
+        }
+    }
+
+
+    /* Flexbox
+    ------------------------*/
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    svg {
+        flex-shrink: 0;
+    }
+
+
+    /* Alignment
+    ------------------------*/
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* Font
+    ------------------------*/
+    nav {
+        margin-bottom: 30px;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        margin: 2px;
+    }
+    @media screen and (min-width: 450px) {
+        a {
+            margin: 10px;
+        }
+    }
+    a:hover,
+    a:first-child {
+        text-decoration: 5px underline;
+        text-underline-offset: .5rem;
+    }
+
+    /* Form
+    ------------------------*/
+    form {
+        display: flex;
+        grid-column: 1;
+        margin-bottom: 20px;
+    }
+    .form-input {
+        padding: 10px 10px 10px 40px;
+        width: 100%;
+        background-color: white;
+        border: thin solid lightblue;
+    }
+    .form-input:focus {
+        outline: none;
+        box-shadow: 0 0 10px lightblue;
+    }
+    .form-search {
+        background-color: transparent;
+        border: none;
+        margin-right: -35px;
+        margin-left: 5px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Image
+    ------------------------*/
+    figure {
+        margin: 0;
+    }
+    img {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    img:hover {
+        order: -2;
+        cursor: pointer;
+    }
+    figcaption {
+        order: -1;
+        grid-column: 1;
+        grid-row: 2;
+        padding: 5px 10px;
+        color: white;
+        background-color: rgba(25, 25, 25, .5);
+    }
+</style>
+
+<body>
+    <section>
+        <nav>
+            <a href="#">Photos</a>
+            <a href="#">Illustrations</a>
+            <a href="#">Vectors</a>
+        </nav>
+
+        <form>
+            <button class="form-search" type="button">
+                <label for="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(33, 37, 41)" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+                </label>
+            </button>
+            <input class="form-input" id="search" type="search" placeholder="Find photos">
+        </form>
+
+        <section class="grid">
+            <figure class="grid-photo">
+                <img src="img/matthew-spiteri-unsplash.jpg" alt="Elephants photo">
+                <figcaption class="flex">
+                    <p>Elephants</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                </figcaption>
+            </figure>
+            <figure class="grid-photo">
+                <img src="img/duminda-perera-unsplash.jpg" alt="Lemur photo">
+                <figcaption class="flex">
+                    <p>Lemur</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                </figcaption>
+            </figure>
+            <figure class="grid-photo">
+                <img src="img/sergey-zhesterev-unsplash.jpg" alt="Baobab photo">
+                <figcaption class="flex">
+                    <p>Baobab</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                </figcaption>
+            </figure>
+            <figure class="grid-photo">
+                <img src="img/wexor-tmg-unsplash.jpg" alt="Turtle photo">
+                <figcaption class="flex">
+                    <p>Turtle</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                </figcaption>
+            </figure>
+            <figure class="grid-photo">
+                <img src="img/tim-stief-unsplash.jpg" alt="Mountain photo">
+                <figcaption class="flex">
+                    <p>Mountain</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                </figcaption>
+            </figure>
+            <figure class="grid-photo">
+                <img src="img/charlesdeluvio-unsplash.jpg" alt="Dog photo">
+                <figcaption class="flex">
+                    <p>Dog</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16"><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                </figcaption>
+            </figure>
+        </section>
+    </section>
+</body>
+</html>
