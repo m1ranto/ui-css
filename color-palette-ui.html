@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Palette UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    body > section {
+        background-color: antiquewhite;
+        max-width: 950px;
+        min-width: 200px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
+        color: rgb(33, 37, 41);
+    }
+
+
+    /* Grid
+    ------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 100px);
+        gap: 1rem;
+    }
+    .grid-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 75px;
+        filter: drop-shadow(5px 5px 5px darkgrey);
+    }
+    div:nth-of-type(1) {
+        grid-column: span 2;
+    }
+    div:nth-of-type(2) {
+        grid-column: span 2;
+    }
+    div:nth-of-type(3) {
+        grid-column: span 2;
+    }
+    div:nth-of-type(4) {
+        grid-column: span 2;
+    }
+
+
+    /* Alignment
+    ------------------------*/
+    h2 {
+        margin-top: 0;
+    }
+
+    /* Box
+    ------------------------*/
+    div > div {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    p {
+        margin-top: 0;
+        height: 65px;
+        padding: 5px;
+        background-color: white;
+    }
+
+    /* Font
+    ------------------------*/
+    span {
+        font-size: small;
+    }
+    span ~ span {
+        font-style: italic;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <section>
+        <h2>Colors</h2>
+        <section class="grid">
+            <div class="grid-item">
+                <div style="background-color: midnightblue"></div>
+                <p>
+                    #191970<br>
+                    <span>Midnightblue</span><br>
+                    <span>title, button</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: dimgrey"></div>
+                <p>
+                    #696969<br>
+                    <span>Dimgrey</span><br>
+                    <span>text secondary</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: lightsteelblue"></div>
+                <p>
+                    #b0c4de<br>
+                    <span>Lightsteelblue</span><br>
+                    <span>border, hover</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: hotpink"></div>
+                <p>
+                    #ff69b4<br>
+                    <span>Hotpink</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: sienna"></div>
+                <p>
+                    #a0522d<br>
+                    <span>Sienna</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: yellow"></div>
+                <p>
+                    #ffff00<br>
+                    <span>Yellow</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: forestgreen"></div>
+                <p>
+                    #228b22<br>
+                    <span>Forestgreen</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: aqua"></div>
+                <p>
+                    #00ffff<br>
+                    <span>Aqua</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: violet"></div>
+                <p>
+                    #ee82ee<br>
+                    <span>Violet</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: darkslategrey"></div>
+                <p>
+                    #2f4f4f<br>
+                    <span>Darkslategrey</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: indianred"></div>
+                <p>
+                    #cd5c5c<br>
+                    <span>Indianred</span>
+                </p>
+            </div>
+            <div class="grid-item">
+                <div style="background-color: orangered"></div>
+                <p>
+                    #ff4500<br>
+                    <span>Orangered</span>
+                </p>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
