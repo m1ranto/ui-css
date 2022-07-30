@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Big Menu UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    .container {
+        background-color: white;
+        max-width: 1000px;
+        min-width: 150px;
+        margin: 50px auto;
+        padding: 25px;
+        border-radius: 10px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-size: larger;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    nav {
+        background-color: lightgrey;
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+    nav ul {
+
+    }
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .menu-lg {
+        display: none;
+    }
+
+
+    /* Navigation
+    ------------------------*/
+    nav {
+        position: absolute;
+        transform: translateY(-1000%);
+
+        z-index: 100;
+        width: 100%;
+        top: -15px;
+        left: -15px;
+    }
+    nav:target {
+        transform: translateY(0);
+    }
+    @media screen and (min-width: 800px) {
+        nav {
+            position: static;
+            transform: translateY(0);
+        }
+
+
+        .container {
+            padding: 10px;
+        }
+        nav {
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav ul {
+            display: flex;
+            column-gap: 1.5rem;
+        }
+        .menu-lg {
+            display: block;
+        }
+        .menu,
+        .close {
+            display: none;
+        }
+    }
+
+
+    /* Dropdown
+    ------------------------*/
+    nav > ul > li,
+    .dropdown-menu span {
+        color: grey;
+        margin-bottom: 10px;
+    }
+    nav ul li ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    nav ul li ul li {
+        color: rgb(33, 37, 41);
+        font-size: small;
+        margin-right: 5px;
+    }
+    a {
+        word-break: break-word;
+    }
+    a:not([href]) {
+        cursor: default;
+        text-decoration: none;
+    }
+    @media screen and (min-width: 400px) {
+        nav ul li ul li {
+            font-size: medium;
+        }
+    }
+    @media screen and (min-width: 800px) {
+        nav ul li ul {
+            display: none;
+        }
+        .dropdown:hover .dropdown-menu {
+            position: absolute;
+            display: block;
+        }
+
+
+        nav > ul > li {
+            color: inherit;
+            margin-bottom: 0;
+        }
+        .dropdown:hover .dropdown-menu-lg {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            left: -75px;
+            width: 600px;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            background-color: lightgrey;
+            padding: 30px;
+            left: -100px;
+            width: 250px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .dropdown-menu-sm {
+            left: -60px;
+            width: 150px;
+        }
+        a {
+            padding-bottom: 10px;
+        }
+        .dropdown-menu span {
+            font-size: large;
+            text-transform: uppercase;
+            color: dimgrey;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <a class="menu" href="#">App</a>
+            <a class="menu" href="#navigation"><svg xmlns="http://www.w3.org/2000/svg" width=24 height=24 fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg></a>
+            <nav id="navigation">
+                <a class="menu-lg" href="#">App</a>
+                <ul>
+                    <li class="dropdown">
+                        <a>Products</a>
+                        <ul class="dropdown-menu dropdown-menu-lg">
+                            <li><span>Skills</span></li>
+                            <li><span>Website</span></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Landing Page</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">SaaS</a></li>
+                            <li></li>
+                            <li><a href="#">Ecommerce</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pricing</a></li>
+                    <li class="dropdown">
+                        <a>Developers</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API</a></li>
+                            <li><a href="#">Videos and Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Support Center & Sales</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Company</a>
+                        <ul class="dropdown-menu dropdown-menu-sm">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#">Log in</a>
+                <a class="close" href="#"><svg xmlns="http://www.w3.org/2000/svg" width=24 height=24 fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></a>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>
