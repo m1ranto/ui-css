@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation with Centered Logo UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    .container {
+        background-color: white;
+        max-width: 1000px;
+        min-width: 150px;
+        margin: 50px auto;
+        padding: 5px;
+        border-radius: 10px;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Alignment
+    ------------------------*/
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        text-decoration: none;
+        color: midnightblue;
+        font-size: large;
+        display: block;
+    }
+    a:hover {
+        color: #15142d;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 20px 30px;
+        margin: 5px 0 0;
+        border-radius: 5px;
+        background-color: lightsteelblue;
+    }
+    nav ul li {
+        margin-bottom: 8px;
+    }
+
+    /* Color
+    ------------------------*/
+    .logo {
+        display: inline-flex;
+        color: white;
+        background-color: midnightblue;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo:hover {
+        color: white;
+        background-color: #15142d;
+    }
+
+
+    /* Navigation
+    ------------------------*/
+    nav {
+        position: relative;
+    }
+    ul {
+        transform: translateY(-1000%);
+        position: absolute;
+        top: 71px;
+    }
+    ul:target {
+        transform: translateY(0);
+    }
+
+    @media screen and (min-width: 600px) {
+        ul {
+            transform: translateY(0);
+            position: static;
+        }
+
+        .logo {
+            display: none;
+        }
+        .container {
+            padding: 0;
+        }
+        .logo-lg {
+            display: inline-flex;
+            color: white;
+            background-color: midnightblue;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-lg:hover {
+            color: white;
+            background-color: #15142d;
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a class="logo" href="#navigation">
+                    App
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+                </a>
+                <ul id="navigation">
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a class="logo-lg" href="#">App</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>
