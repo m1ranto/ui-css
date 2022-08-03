@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vertical Mobile Menu UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue;
+    }
+    header {
+        background-color: lightgrey;
+        max-width: 900px;
+        min-width: 150px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
+        color: rgb(33, 37, 41);
+    }
+
+
+    /* Alignment
+    ------------------------*/
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    header a {
+        text-decoration: none;
+        color: inherit;
+        font-size: large;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+
+        width: 100%;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0 0 0 60px;
+        padding: 10px 20px;
+        color: white;
+        background-color: #712cf9;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        flex-basis: 300px;
+    }
+    nav ul li {
+        margin-block: 10px;
+    }
+    .close {
+        position: absolute;
+        top: 22px;
+        right: 20px;
+    }
+
+
+    /* Navigation
+    ------------------------*/
+    header {
+        position: relative;
+        height: 300px;
+    }
+    nav {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        transform: translateY(-1000%);
+    }
+    nav:target {
+        transform: translateY(0);
+    }
+
+    @media screen and (min-width: 700px) {
+        nav {
+            transform: translateY(0);
+            position: static;
+        }
+
+        header {
+            height: auto;
+            padding: 0 20px;
+            align-items: center;
+        }
+        nav {
+            display: inline;
+        }
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            column-gap: 1rem;
+            color: inherit;
+            background-color: transparent;
+            padding: 10px 0;
+        }
+        .menu,
+        .close {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <a class="logo" href="#">App</a>
+        <a class="menu" href="#navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+        </a>
+        <nav id="navigation">
+            <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li>
+                    <a class="close" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
