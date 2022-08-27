@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Empty State Post UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue
+    }
+    section {
+        text-align: center;
+        background-color: #1c2540;
+        max-width: 400px;
+        min-width: 150px;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px auto;
+        color: whitesmoke;
+    }
+
+    /* Alignment
+    ------------------------*/
+    svg {
+        vertical-align: top;
+    }
+
+    /* Color
+    ------------------------*/
+    p {
+        color: grey;
+    }
+
+    /* Button
+    ------------------------*/
+    button {
+        border: none;
+        border-radius: 20px;
+        padding: 8px 10px;
+        font-size: medium;
+        color: inherit;
+        background-color: #fa6ca3;
+        cursor: pointer;
+    }
+    button:hover {
+        opacity: .9;
+    }
+    button:active {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <section>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-image-fill" viewBox="0 0 16 16">
+            <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
+        </svg>
+        <h3>No post yet</h3>
+        <p>Get started and post the content you want.</p>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/></svg>
+            add post
+        </button>
+    </section>
+</body>
+</html>
