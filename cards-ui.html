@@ -45,6 +45,11 @@
 
     /* Text
     ------------------------*/
+    a {
+        text-decoration: none;
+        color: #141a41;
+        font-size: medium;
+    }
     .text-primary {
         color: #291f68
     }
@@ -109,13 +114,26 @@
             <img class="img-rounded" src="img/jake-nackos.png" alt="profile picture">
             <address class="fst-normal">
                 <div class="text-primary fw-bold fs-large">Zahou Stephens</div>
-                <div class="text-primary fs-small">Atlanta, GA, USA</div>
+                <div class="text-primary fs-small"><a href="#">@zahou</a></div>
             </address>
         </div>
         <div class="flex flex-column align-items-center">
-            <button class="btn btn-blue">Follow</button>
+            <button id="follow" class="btn btn-blue">Follow</button>
             <button class="btn btn-outline-blue">Message</button>
         </div>
     </article>
+
+    <script>
+        const followButton = document.querySelector("#follow")
+        followButton.addEventListener("click", function () {
+            if (this.textContent === "Follow") {
+                this.innerHTML = "Unfollow"
+                this.classList.replace("btn-blue", "btn-outline-blue")
+            } else {
+                this.innerHTML = "Follow"
+                this.classList.replace("btn-outline-blue", "btn-blue")
+            }
+        })
+    </script>
 </body>
 </html>
