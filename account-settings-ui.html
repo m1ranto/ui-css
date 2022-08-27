@@ -91,18 +91,34 @@
         <h2>Account preferences</h2>
         <div class="flex flex-wrap justify-content-between mb-1">
             <div class="flex-item">
-                <p class="mt-0 mb-0">Email address</p>
-                <p class="mt-05 mb-0">email@address.com</p>
+                <label for="email">Email address</label><br>
+                <input type="email" value="email@address.com" id="email" disabled>
             </div>
-            <button class="flex-item-btn btn-primary mt-2">Change</button>
+            <button id="emailButton" class="flex-item-btn btn-primary mt-2">Change</button>
         </div>
         <div class="flex flex-wrap justify-content-between">
             <div class="flex-item">
                 <label for="password">Password</label><br>
                 <input type="password" value="password" id="password" disabled>
             </div>
-            <button class="flex-item-btn btn-primary mt-2">Change</button>
+            <button id="passwordButton" class="flex-item-btn btn-primary mt-2">Change</button>
         </div>
     </section>
+
+    <script>
+        const passwordButton = document.querySelector("#passwordButton")
+        const passwordInput = document.querySelector("#password")
+        passwordButton.addEventListener("click", function () {
+            passwordInput.toggleAttribute("disabled")
+            this.textContent === "Change" ? this.innerHTML = "Save" : this.innerHTML = "Change"
+        })
+
+        const emailButton = document.querySelector("#emailButton")
+        const emailInput = document.querySelector("#email")
+        emailButton.addEventListener("click", function () {
+            emailInput.toggleAttribute("disabled")
+            this.textContent === "Change" ? this.innerHTML = "Save" : this.innerHTML = "Change"
+        })
+    </script>
 </body>
 </html>
