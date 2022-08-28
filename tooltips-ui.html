@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Empty State Post UI</title>
+</head>
+
+<style>
+    body {
+        background-color: skyblue
+    }
+    section {
+        background-color: whitesmoke;
+        max-width: 400px;
+        min-width: 150px;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px auto;
+        color: rgb(33, 37, 41);
+    }
+
+    /* Text
+    ------------------------*/
+    .text {
+        cursor: default;
+        border-bottom: 1px dotted black;
+
+        position: relative;
+        display: inline-block;
+    }
+    .tooltip {
+        visibility: hidden;
+        color: whitesmoke;
+        background-color: #1c174d;
+        padding: 5px 8px;
+        border-radius: 5px;
+        width: 100px;
+
+        position: absolute;
+        top: -5px;
+        left: 115%;
+    }
+    .text:hover .tooltip {
+        visibility: visible;
+    }
+    /* tooltip arrow */
+    .text .tooltip::after {
+        content: "";
+        border: 5px solid;
+        border-color: transparent #1c174d transparent transparent;
+
+        position: absolute;
+        top: 12px;
+        right: 100%;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="text">
+            Hover me
+            <span class="tooltip">I am a tooltip</span>
+        </div>
+    </section>
+</body>
+</html>
